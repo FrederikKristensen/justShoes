@@ -1,6 +1,7 @@
 const Shoes = [
   {
     id: 1,
+    name: 'Sunburst Runner',
     type: 'Sport',
     size: 3,
     color: 'Yellow',
@@ -8,6 +9,7 @@ const Shoes = [
   },
   {
     id: 2,
+    name: 'Shadow Sneaker',
     type: 'Sneakers',
     size: 8,
     color: 'Black',
@@ -15,6 +17,7 @@ const Shoes = [
   },
   {
     id: 3,
+    name: 'Timber Trail',
     type: 'Boots',
     size: 10,
     color: 'Brown',
@@ -22,6 +25,7 @@ const Shoes = [
   },
   {
     id: 4,
+    name: 'Cloud Sandal',
     type: 'Sandals',
     size: 6,
     color: 'White',
@@ -29,6 +33,7 @@ const Shoes = [
   },
   {
     id: 5,
+    name: 'Ocean Sprint',
     type: 'Running',
     size: 9,
     color: 'Blue',
@@ -36,6 +41,7 @@ const Shoes = [
   },
   {
     id: 6,
+    name: 'Midnight Oxford',
     type: 'Formal',
     size: 11,
     color: 'Black',
@@ -43,6 +49,7 @@ const Shoes = [
   },
   {
     id: 7,
+    name: 'Crimson Flex',
     type: 'Sport',
     size: 7,
     color: 'Red',
@@ -50,6 +57,7 @@ const Shoes = [
   },
   {
     id: 8,
+    name: 'Pure Street',
     type: 'Sneakers',
     size: 5,
     color: 'White',
@@ -57,6 +65,7 @@ const Shoes = [
   },
   {
     id: 9,
+    name: 'Stonewalker',
     type: 'Boots',
     size: 8,
     color: 'Grey',
@@ -64,6 +73,7 @@ const Shoes = [
   },
   {
     id: 10,
+    name: 'Pink Breeze',
     type: 'Sandals',
     size: 4,
     color: 'Pink',
@@ -71,6 +81,7 @@ const Shoes = [
   },
   {
     id: 11,
+    name: 'Forest Dash',
     type: 'Running',
     size: 12,
     color: 'Green',
@@ -78,6 +89,7 @@ const Shoes = [
   },
   {
     id: 12,
+    name: 'Classic Heritage',
     type: 'Formal',
     size: 9,
     color: 'Brown',
@@ -85,6 +97,7 @@ const Shoes = [
   },
   {
     id: 13,
+    name: 'Purple Haze',
     type: 'Sneakers',
     size: 7,
     color: 'Purple',
@@ -92,6 +105,7 @@ const Shoes = [
   },
   {
     id: 14,
+    name: 'Blaze Sport',
     type: 'Sport',
     size: 10,
     color: 'Orange',
@@ -99,6 +113,7 @@ const Shoes = [
   },
   {
     id: 15,
+    name: 'Black Summit',
     type: 'Boots',
     size: 6,
     color: 'Black',
