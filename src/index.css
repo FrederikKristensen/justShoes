@@ -3,3 +3,15 @@
 :root {
   @apply bg-gray-300;
 }
+
+h1 {
+	@apply font-bold;
+}
+
+h2 {
+	@apply text-sm font-medium;
+}
+
+h3 {
+	@apply text-xs;
+}

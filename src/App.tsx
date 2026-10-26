@@ -5,9 +5,10 @@ import Shoes from './Shoes';
 function App() {
   return (
     <main>
-      <div>
+      <div>Navbar</div>
+      <div className="grid grid-cols-3 gap-2 mx-4 mt-3 p-3 rounded-xl bg-gray-200">
         {Shoes.map((e) => {
-          return <Shocard id={e.id} type={e.type} size={e.size} color={e.color} price={e.price} />;
+          return <Shocard type={e.type} size={e.size} color={e.color} price={e.price} />;
         })}
       </div>
     </main>
