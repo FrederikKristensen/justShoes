@@ -1,4 +1,13 @@
-const Shoes = [
+export type ShoesType = {
+  id: number;
+  name: string;
+  type: string;
+  size: number;
+  color: string;
+  price: number;
+};
+
+const Shoes: ShoesType[] = [
   {
     id: 1,
     name: 'Sunburst Runner',
