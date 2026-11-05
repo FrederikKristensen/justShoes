@@ -9,6 +9,7 @@ interface SortFilterProp {
 const SortFilter = ({ Shoes }: SortFilterProp) => {
   const [sort, setSort] = useState<{ key: string; direction: 'asc' | 'desc' } | null>(null);
   const [filterType, setFilterType] = useState<string>('');
+  const [filterColor, setFilterColor] = useState<string>('');
 
   // Storing our data of Shoes
   const listData = useMemo(() => {
@@ -22,33 +23,59 @@ const SortFilter = ({ Shoes }: SortFilterProp) => {
       }
     }
 
+    if (filterColor) {
+      result = result.filter((shoe) => shoe.color === filterColor);
+    }
+
     if (filterType) {
       result = result.filter((shoe) => shoe.type === filterType);
     }
 
     return result;
-  }, [Shoes, sort, filterType]);
+  }, [Shoes, sort, filterColor, filterType]);
 
   const handleSort = (s: string) => {
     const direction = sort && sort.key === s && sort.direction === 'asc' ? 'desc' : 'asc';
     setSort({ key: s, direction });
   };
 
-  const handleFilter = (type: string) => {
+  const handleFilterColor = (color: string) => {
+    setFilterColor(color);
+  };
+
+  const handleFilterType = (type: string) => {
     setFilterType(type);
   };
 
   return (
     <>
       <div className="bg-gray-200 grid grid-cols-4 p-1">
-        <div className="border">Color</div>
+        <select
+          className="border"
+          value={filterColor}
+          defaultValue=""
+          onChange={(e) => handleFilterColor(e.target.value)}
+        >
+          <option value={''}>All Colors</option>
+          <option value={'Yellow'}>Yellow</option>
+          <option value={'Black'}>Black</option>
+          <option value={'Brown'}>Brown</option>
+          <option value={'White'}>White</option>
+          <option value={'Blue'}>Blue</option>
+          <option value={'Red'}>Red</option>
+          <option value={'Grey'}>Grey</option>
+          <option value={'Pink'}>Pink</option>
+          <option value={'Green'}>Green</option>
+          <option value={'Purple'}>Purple</option>
+          <option value={'Orange'}>Orange</option>
+        </select>
         <select
           className="border"
           value={filterType}
           defaultValue=""
-          onChange={(e) => handleFilter(e.target.value)}
+          onChange={(e) => handleFilterType(e.target.value)}
         >
-          <option value={''}>All</option>
+          <option value={''}>All Types</option>
           <option value={'Formal'}>Formal</option>
           <option value={'Sport'}>Sport</option>
           <option value={'Boots'}>Boots</option>
