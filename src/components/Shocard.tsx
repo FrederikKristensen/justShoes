@@ -16,7 +16,7 @@ const Shocard = ({ name, type, size, color, price }: ShocardProps) => {
   return (
     <>
       <button onClick={() => dialogRef.current?.showModal()}>
-        <div className="bg-gray-400 rounded-md px-3 py-1">
+        <div className="bg-gray-400 rounded-md px-3 py-1 min-w-40">
           <div className="relative">
             <img src={logo} className="w-full h-25 object-cover" />
           </div>

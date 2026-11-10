@@ -6,8 +6,10 @@ import SortFilter from './components/SortFilter';
 function App() {
   return (
     <main>
-      <Navbar />
-      <SortFilter Shoes={Shoes} />
+      <div className="h-screen overflow-y-auto">
+        <Navbar />
+        <SortFilter Shoes={Shoes} />
+      </div>
     </main>
   );
 }

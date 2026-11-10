@@ -2,6 +2,7 @@
 
 :root {
   @apply bg-gray-300;
+	scrollbar-gutter: stable both-edges;
 }
 
 h1 {

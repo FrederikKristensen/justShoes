@@ -49,9 +49,9 @@ const SortFilter = ({ Shoes }: SortFilterProp) => {
 
   return (
     <>
-      <div className="bg-gray-200 grid grid-cols-4 p-1">
+      <div className="grid grid-cols-4 pt-1 gap-3 max-w-130 mx-auto">
         <select
-          className="border"
+          className="border rounded-sm bg-gray-200 text-center p-0.5"
           value={filterColor}
           defaultValue=""
           onChange={(e) => handleFilterColor(e.target.value)}
@@ -70,7 +70,7 @@ const SortFilter = ({ Shoes }: SortFilterProp) => {
           <option value={'Orange'}>Orange</option>
         </select>
         <select
-          className="border"
+          className="border rounded-sm bg-gray-200 text-center p-0.5"
           value={filterType}
           defaultValue=""
           onChange={(e) => handleFilterType(e.target.value)}
@@ -82,14 +82,20 @@ const SortFilter = ({ Shoes }: SortFilterProp) => {
           <option value={'Sneakers'}>Sneakers</option>
           <option value={'Sandals'}>Sandals</option>
         </select>
-        <div className="border" onClick={() => handleSort('size')}>
-          Size{sort?.key === 'size' && (sort.direction === 'asc' ? '▲' : '▼')}
+        <div
+          className="border rounded-sm bg-gray-200 text-center p-0.5"
+          onClick={() => handleSort('size')}
+        >
+          Size{sort?.key === 'size' && (sort.direction === 'asc' ? ' ▲' : ' ▼')}
         </div>
-        <div className="border" onClick={() => handleSort('price')}>
-          Price{sort?.key === 'price' && (sort.direction === 'asc' ? '▲' : '▼')}
+        <div
+          className="border rounded-sm bg-gray-200 text-center p-0.5"
+          onClick={() => handleSort('price')}
+        >
+          Price{sort?.key === 'price' && (sort.direction === 'asc' ? ' ▲' : ' ▼')}
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-2 mx-4 mt-3 p-3 rounded-xl bg-gray-200">
+      <div className="grid grid-cols-3 gap-2 mx-1 mt-1 p-3 rounded-xl bg-gray-200">
         {listData.map((e) => {
           return (
             <Shocard name={e.name} type={e.type} size={e.size} color={e.color} price={e.price} />
