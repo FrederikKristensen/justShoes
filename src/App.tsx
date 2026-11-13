@@ -1,16 +1,18 @@
 import './App.css';
-import Shoes from './Shoes';
 import Navbar from './components/Navbar';
-import SortFilter from './components/SortFilter';
+import { Route, Routes } from 'react-router';
+import Home from './pages/Home';
+import Basket from './pages/Basket';
 
 function App() {
   return (
-    <main>
-      <div className="h-screen overflow-y-auto">
-        <Navbar />
-        <SortFilter Shoes={Shoes} />
-      </div>
-    </main>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/basket" element={<Basket />} />
+      </Routes>
+    </>
   );
 }
 
