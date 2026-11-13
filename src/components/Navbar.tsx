@@ -1,10 +1,18 @@
+import { NavLink } from 'react-router';
+
 const Navbar = () => {
   return (
     <nav>
       <div className="grid grid-cols-3 p-2 font-bold">
-        <div>JustShoes</div>
-        <div>Admin</div>
-        <div>Basket</div>
+        <NavLink to="/" end>
+          JustShoes
+        </NavLink>
+        <NavLink to="/admin" end>
+          Admin
+        </NavLink>
+        <NavLink to="/basket" end>
+          Basket
+        </NavLink>
       </div>
     </nav>
   );
