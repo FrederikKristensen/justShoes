@@ -25,7 +25,7 @@ const Shocard = ({ name, type, size, color, price }: ShocardProps) => {
             <h3>Size: {size}</h3>
             <h3 className="justify-self-end">Type: {type}</h3>
             <h3>Color: {color}</h3>
-            <h2 className=" justify-self-end ">Price: {price}</h2>
+            <h2 className="justify-self-end ">Price: {price}</h2>
           </div>
         </div>
       </button>
