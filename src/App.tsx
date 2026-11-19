@@ -7,7 +7,7 @@ import { BasketContext } from './context/BasketContext';
 import { useState } from 'react';
 
 function App() {
-  const [basket] = useState();
+  const [basket] = useState([]);
   return (
     <>
       <BasketContext.Provider value={basket}>
