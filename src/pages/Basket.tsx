@@ -1,4 +1,8 @@
+// import { useBasketContext } from '../context/BasketContext';
+
 const Basket = () => {
+  // const basket = useBasketContext();
+
   return (
     <div className="grid grid-cols-3">
       <div className="col-span-2 mx-1 mt-1 p-4 rounded-xl bg-gray-200">
@@ -10,6 +14,9 @@ const Basket = () => {
             <p>Type, Size, Color</p>
           </div>
           <div>Price</div>
+          {/* {basket.map((e) => (
+            <div key={e.id}>{e.name}</div>
+          ))} */}
         </div>
       </div>
       <div className="mx-1 mt-1 p-3 rounded-xl bg-gray-200">Total price:</div>
