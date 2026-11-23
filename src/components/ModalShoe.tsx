@@ -1,12 +1,14 @@
 import type { Ref } from 'react';
 import type { ShocardProps } from './Shocard';
 import logo from '../assets/react.svg';
+import { useBasketContext } from '../context/BasketContext';
 
 type ModalShoeProps = {
   dialogRef: Ref<HTMLDialogElement>;
 };
 
 const ModalShoe = ({
+  id,
   name,
   size,
   color,
@@ -19,6 +21,9 @@ const ModalShoe = ({
       e.currentTarget.close();
     }
   };
+
+  const { addToBasket } = useBasketContext();
+
   return (
     <>
       <dialog
@@ -35,7 +40,9 @@ const ModalShoe = ({
           <h2 className="justify-self-end ">Price: {price}</h2>
         </div>
         <div className="text-center border-2 rounded-sm m-1">
-          <button>Add to cart</button>
+          <button onClick={() => addToBasket({ id, name, size, type, color, price })}>
+            Add to cart
+          </button>
         </div>
       </dialog>
     </>

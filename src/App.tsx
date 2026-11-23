@@ -5,12 +5,18 @@ import Home from './pages/Home';
 import Basket from './pages/Basket';
 import { BasketContext } from './context/BasketContext';
 import { useState } from 'react';
+import type { ShoesType } from './Shoes';
 
 function App() {
-  const [basket] = useState([]);
+  const [basket, setBasket] = useState<ShoesType[]>([]);
+
+  const addToBasket = (item: ShoesType) => {
+    setBasket((prev) => [...prev, item]);
+  };
+
   return (
     <>
-      <BasketContext.Provider value={basket}>
+      <BasketContext.Provider value={{ basket, addToBasket }}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

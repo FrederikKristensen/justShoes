@@ -3,6 +3,7 @@ import logo from '../assets/react.svg';
 import ModalShoe from './ModalShoe';
 
 export type ShocardProps = {
+  id: number;
   name: string;
   type: string;
   size: number;
@@ -10,7 +11,7 @@ export type ShocardProps = {
   price: number;
 };
 
-const Shocard = ({ name, type, size, color, price }: ShocardProps) => {
+const Shocard = ({ id, name, type, size, color, price }: ShocardProps) => {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
 
   return (
@@ -33,6 +34,7 @@ const Shocard = ({ name, type, size, color, price }: ShocardProps) => {
       {dialogRef && (
         <ModalShoe
           dialogRef={dialogRef}
+          id={id}
           name={name}
           type={type}
           size={size}

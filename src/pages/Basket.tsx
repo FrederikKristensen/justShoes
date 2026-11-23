@@ -1,7 +1,7 @@
 import { useBasketContext } from '../context/BasketContext';
 
 const Basket = () => {
-  const basket = useBasketContext();
+  const { basket } = useBasketContext();
 
   return (
     <div className="grid grid-cols-3">
@@ -13,7 +13,7 @@ const Basket = () => {
           basket.map((e) => {
             return (
               <>
-                <div className="grid grid-cols-4">
+                <div className="grid grid-cols-4 pl-2">
                   <div className="col-span-3">
                     <p>Picture</p>
                     <p>{e.name}</p>
