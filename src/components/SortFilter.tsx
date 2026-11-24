@@ -98,7 +98,14 @@ const SortFilter = ({ Shoes }: SortFilterProp) => {
       <div className="grid grid-cols-3 gap-2 mx-1 mt-1 p-3 rounded-xl bg-gray-200">
         {listData.map((e) => {
           return (
-            <Shocard name={e.name} type={e.type} size={e.size} color={e.color} price={e.price} />
+            <Shocard
+              id={e.id}
+              name={e.name}
+              type={e.type}
+              size={e.size}
+              color={e.color}
+              price={e.price}
+            />
           );
         })}
       </div>
