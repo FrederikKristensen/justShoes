@@ -6,6 +6,7 @@ import Basket from './pages/Basket';
 import { BasketContext } from './context/BasketContext';
 import { useState } from 'react';
 import type { ShoesType } from './Shoes';
+import Profile from './pages/Profile';
 
 function App() {
   const [basket, setBasket] = useState<ShoesType[]>([]);
@@ -20,6 +21,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/basket" element={<Basket />} />
         </Routes>
       </BasketContext.Provider>

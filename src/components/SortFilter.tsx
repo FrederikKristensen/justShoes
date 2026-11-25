@@ -55,7 +55,7 @@ const SortFilter = ({ Shoes }: SortFilterProp) => {
       <div className="grid grid-cols-4">
         <div className="grid grid-cols-3 pt-1 gap-3 mx-auto col-span-3">
           <div className="flex items-center border border-gray-400 rounded-lg bg-gray-200 text-center p-1">
-            <IoIosColorPalette className="mx-0.5" />
+            <IoIosColorPalette />
             <select
               className="px-1"
               value={filterColor}
@@ -76,7 +76,7 @@ const SortFilter = ({ Shoes }: SortFilterProp) => {
             </select>
           </div>
           <div className="flex items-center border border-gray-400 rounded-lg bg-gray-200 text-center p-1">
-            <HiMiniSquares2X2 className="mx-0.5" />
+            <HiMiniSquares2X2 />
             <select
               className="px-1"
               value={filterType}

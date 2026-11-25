@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router';
+import { FaShoppingBasket } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
@@ -9,11 +10,12 @@ const Navbar = () => {
             JustShoes
           </NavLink>
         </div>
-        <NavLink to="/admin" end>
-          Admin
+        <NavLink to="/profile" end>
+          Profile
         </NavLink>
         <div className="text-blue-500 text-xl">
-          <NavLink to="/basket" end>
+          <NavLink className="flex items-center" to="/basket" end>
+            <FaShoppingBasket className="m-1" />
             Basket
           </NavLink>
         </div>
