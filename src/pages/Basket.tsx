@@ -18,7 +18,7 @@ const Basket = () => {
           basket.map((e) => {
             return (
               <>
-                <div className="grid grid-cols-4 pl-2">
+                <div className="grid grid-cols-4 pl-2 py-1">
                   <div className="col-span-3">
                     <p>Picture</p>
                     <p>{e.name}</p>
@@ -28,6 +28,7 @@ const Basket = () => {
                   </div>
                   <div>{e.price} ,-</div>
                 </div>
+                <div className="h-0.5 w-5/6 bg-gray-300 rounded-full mt-2 mx-auto last:hidden" />
               </>
             );
           })
