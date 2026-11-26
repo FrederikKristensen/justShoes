@@ -3,6 +3,11 @@ import { useBasketContext } from '../context/BasketContext';
 const Basket = () => {
   const { basket } = useBasketContext();
 
+  function totalBasketPrice() {
+    const total = basket.reduce((sum, item) => sum + item.price, 0);
+    return total;
+  }
+
   return (
     <div className="grid grid-cols-3">
       <div className="col-span-2 mx-1 mt-1 p-4 rounded-xl bg-gray-200">
@@ -28,7 +33,10 @@ const Basket = () => {
           })
         )}
       </div>
-      <div className="mx-1 mt-1 p-3 rounded-xl bg-gray-200">Total price:</div>
+      <div className="mx-1 mt-1 p-3 rounded-xl bg-gray-200">
+        Total price:
+        <div className="font-medium">{totalBasketPrice()},-</div>
+      </div>
     </div>
   );
 };
