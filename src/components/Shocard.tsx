@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import logo from '../assets/react.svg';
 import ModalShoe from './ModalShoe';
 
 export type ShocardProps = {
@@ -9,9 +8,10 @@ export type ShocardProps = {
   size: number;
   color: string;
   price: number;
+  image: string;
 };
 
-const Shocard = ({ id, name, type, size, color, price }: ShocardProps) => {
+const Shocard = ({ id, name, type, size, color, price, image }: ShocardProps) => {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
 
   return (
@@ -19,7 +19,7 @@ const Shocard = ({ id, name, type, size, color, price }: ShocardProps) => {
       <button onClick={() => dialogRef.current?.showModal()}>
         <div className="bg-gray-400 rounded-md px-3 py-1 min-w-40">
           <div className="relative">
-            <img src={logo} className="w-full h-25 object-cover" />
+            <img src={image} className="w-full h-25 object-cover" />
           </div>
           <div className="grid grid-cols-2 whitespace-nowrap">
             <h1 className="col-span-2">{name}</h1>
@@ -40,6 +40,7 @@ const Shocard = ({ id, name, type, size, color, price }: ShocardProps) => {
           size={size}
           color={color}
           price={price}
+          image={image}
         />
       )}
     </>

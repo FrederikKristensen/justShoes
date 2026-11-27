@@ -68,7 +68,7 @@ const SortFilter = ({ Shoes }: SortFilterProp) => {
               <option value={'White'}>White</option>
               <option value={'Blue'}>Blue</option>
               <option value={'Red'}>Red</option>
-              <option value={'Grey'}>Grey</option>
+              <option value={'Gray'}>Gray</option>
               <option value={'Pink'}>Pink</option>
               <option value={'Green'}>Green</option>
               <option value={'Purple'}>Purple</option>
@@ -119,6 +119,7 @@ const SortFilter = ({ Shoes }: SortFilterProp) => {
               size={e.size}
               color={e.color}
               price={e.price}
+              image={e.image}
             />
           );
         })}

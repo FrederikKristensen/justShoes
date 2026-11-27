@@ -1,3 +1,9 @@
+const Images = import.meta.glob<string>('./assets/*.png', {
+  eager: true,
+  query: 'url',
+  import: 'default',
+});
+
 export type ShoesType = {
   id: number;
   name: string;
@@ -5,24 +11,27 @@ export type ShoesType = {
   size: number;
   color: string;
   price: number;
+  image: string;
 };
 
 const Shoes: ShoesType[] = [
   {
     id: 1,
-    name: 'Sunburst Runner',
-    type: 'Sport',
+    name: 'Shadow Sneaker',
+    type: 'Sneakers',
     size: 3,
-    color: 'Yellow',
+    color: 'Black',
     price: 200,
+    image: Images['./assets/blacksneakers.png'],
   },
   {
     id: 2,
-    name: 'Shadow Sneaker',
-    type: 'Sneakers',
+    name: 'Ocean Sprint',
+    type: 'Sport',
     size: 8,
-    color: 'Black',
+    color: 'Blue',
     price: 450,
+    image: Images['./assets/bluesport.png'],
   },
   {
     id: 3,
@@ -31,54 +40,61 @@ const Shoes: ShoesType[] = [
     size: 10,
     color: 'Brown',
     price: 700,
+    image: Images['./assets/brownboots.png'],
   },
   {
     id: 4,
-    name: 'Cloud Sandal',
-    type: 'Sandals',
+    name: 'Classic Heritage',
+    type: 'Formal',
     size: 6,
-    color: 'White',
+    color: 'Brown',
     price: 150,
+    image: Images['./assets/brownformal.png'],
   },
   {
     id: 5,
-    name: 'Ocean Sprint',
-    type: 'Running',
+    name: 'Sunburst',
+    type: 'Sandals',
     size: 9,
-    color: 'Blue',
+    color: 'Brown',
     price: 550,
+    image: Images['./assets/brownsandals.png'],
   },
   {
     id: 6,
     name: 'Midnight Oxford',
-    type: 'Formal',
+    type: 'Sneakers',
     size: 11,
-    color: 'Black',
+    color: 'Brown',
     price: 850,
+    image: Images['./assets/brownsneakers.png'],
   },
   {
     id: 7,
     name: 'Crimson Flex',
-    type: 'Sport',
+    type: 'Sneakers',
     size: 7,
     color: 'Red',
     price: 350,
+    image: Images['./assets/redsneakers.png'],
   },
   {
     id: 8,
-    name: 'Pure Street',
-    type: 'Sneakers',
+    name: 'Pure vacation',
+    type: 'Sandals',
     size: 5,
-    color: 'White',
+    color: 'Gray',
     price: 400,
+    image: Images['./assets/graysandals.png'],
   },
   {
     id: 9,
     name: 'Stonewalker',
     type: 'Boots',
     size: 8,
-    color: 'Grey',
+    color: 'Black',
     price: 650,
+    image: Images['./assets/blackboots.png'],
   },
   {
     id: 10,
@@ -87,46 +103,34 @@ const Shoes: ShoesType[] = [
     size: 4,
     color: 'Pink',
     price: 180,
+    image: Images['./assets/pinksandals.png'],
   },
   {
     id: 11,
     name: 'Forest Dash',
-    type: 'Running',
+    type: 'Sneakers',
     size: 12,
     color: 'Green',
     price: 600,
+    image: Images['./assets/greensneakers.png'],
   },
   {
     id: 12,
-    name: 'Classic Heritage',
-    type: 'Formal',
+    name: 'Cloud Sandal',
+    type: 'Sneakers',
     size: 9,
-    color: 'Brown',
+    color: 'White',
     price: 900,
+    image: Images['./assets/whitesneakers.png'],
   },
   {
     id: 13,
-    name: 'Purple Haze',
-    type: 'Sneakers',
-    size: 7,
-    color: 'Purple',
-    price: 500,
-  },
-  {
-    id: 14,
     name: 'Blaze Sport',
     type: 'Sport',
     size: 10,
     color: 'Orange',
     price: 300,
-  },
-  {
-    id: 15,
-    name: 'Black Summit',
-    type: 'Boots',
-    size: 6,
-    color: 'Black',
-    price: 750,
+    image: Images['./assets/orangesport.png'],
   },
 ];
 
