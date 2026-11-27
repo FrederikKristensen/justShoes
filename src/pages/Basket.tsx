@@ -18,9 +18,15 @@ const Basket = () => {
           basket.map((e) => {
             return (
               <>
-                <div className="grid grid-cols-4 pl-2 py-1">
+                <div className="grid grid-cols-5 pl-2 py-1">
+                  <div className="pr-1">
+                    <img
+                      src={e.image}
+                      alt={`Image of ${e.name}`}
+                      className="w-full h-20 object-cover rounded-lg"
+                    />
+                  </div>
                   <div className="col-span-3">
-                    <p>Picture</p>
                     <p>{e.name}</p>
                     <p>
                       {e.type}, {e.size}, {e.color}
@@ -33,7 +39,7 @@ const Basket = () => {
                     >
                       X
                     </div>
-                    <div className="justify-self-end">{e.price} ,-</div>
+                    <div className="justify-self-end">{e.price},-</div>
                   </div>
                 </div>
                 <div className="h-0.5 w-5/6 bg-gray-300 rounded-full mt-2 mx-auto last:hidden" />
