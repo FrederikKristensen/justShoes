@@ -5,6 +5,7 @@ import { useContext } from 'react';
 type BasketContextType = {
   basket: ShoesType[];
   addToBasket: (item: ShoesType) => void;
+  removeItem: (item: ShoesType) => void;
 };
 
 // Here we store/create our context that holds the baskets inventory

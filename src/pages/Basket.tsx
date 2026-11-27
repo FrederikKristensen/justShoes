@@ -1,7 +1,7 @@
 import { useBasketContext } from '../context/BasketContext';
 
 const Basket = () => {
-  const { basket } = useBasketContext();
+  const { basket, removeItem } = useBasketContext();
 
   function totalBasketPrice() {
     const total = basket.reduce((sum, item) => sum + item.price, 0);
@@ -26,7 +26,15 @@ const Basket = () => {
                       {e.type}, {e.size}, {e.color}
                     </p>
                   </div>
-                  <div>{e.price} ,-</div>
+                  <div className="grid grid-flow-col grid-rows-3">
+                    <div
+                      className="justify-self-end row-span-2 text-gray-400 hover:text-gray-900 cursor-pointer font-semibold p-1"
+                      onClick={() => removeItem(e)}
+                    >
+                      X
+                    </div>
+                    <div className="justify-self-end">{e.price} ,-</div>
+                  </div>
                 </div>
                 <div className="h-0.5 w-5/6 bg-gray-300 rounded-full mt-2 mx-auto last:hidden" />
               </>

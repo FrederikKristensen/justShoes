@@ -15,9 +15,13 @@ function App() {
     setBasket((prev) => [...prev, item]);
   };
 
+  const removeItem = (item: ShoesType) => {
+    setBasket(basket.filter((prev) => prev.id != item.id));
+  };
+
   return (
     <>
-      <BasketContext.Provider value={{ basket, addToBasket }}>
+      <BasketContext.Provider value={{ basket, addToBasket, removeItem }}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
