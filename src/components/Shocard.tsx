@@ -16,17 +16,17 @@ const Shocard = ({ id, name, type, size, color, price, image }: ShocardProps) =>
 
   return (
     <>
-      <button onClick={() => dialogRef.current?.showModal()}>
-        <div className="bg-gray-400 rounded-md px-3 py-1 min-w-40">
+      <button onClick={() => dialogRef.current?.showModal()} className="cursor-pointer">
+        <div className="relative bg-gray-400 rounded-lg min-w-40 overflow-hidden pb-2">
           <div className="relative">
-            <img src={image} className="w-full h-25 object-cover" />
+            <img src={image} className="w-full h-30 object-cover" />
           </div>
           <div className="grid grid-cols-2 whitespace-nowrap">
             <h1 className="col-span-2">{name}</h1>
             <h3>Size: {size}</h3>
-            <h3 className="justify-self-end">Type: {type}</h3>
+            <h3 className="justify-self-center">Type: {type}</h3>
             <h3>Color: {color}</h3>
-            <h2 className="justify-self-end ">Price: {price}</h2>
+            <h2 className="justify-self-center">Price: {price}</h2>
           </div>
         </div>
       </button>

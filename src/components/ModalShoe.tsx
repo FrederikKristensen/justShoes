@@ -31,19 +31,20 @@ const ModalShoe = ({
         ref={dialogRef}
         onClick={handleClosing}
       >
-        <img src={image} className="w-full h-45 object-cover" />
+        <img src={image} className="w-full h-45 object-cover rounded-lg" />
         <div className="grid grid-cols-2">
-          <h1 className="col-span-2">{name}</h1>
-          <h3>Size: {size}</h3>
-          <h3 className="justify-self-end">Type: {type}</h3>
-          <h3>Color: {color}</h3>
-          <h2 className="justify-self-end ">Price: {price}</h2>
+          <h1 className="col-span-2 justify-self-center">{name}</h1>
+          <h3 className="justify-self-center">Size: {size}</h3>
+          <h3 className="justify-self-center">Type: {type}</h3>
+          <h3 className="justify-self-center">Color: {color}</h3>
+          <h2 className="justify-self-center ">Price: {price}</h2>
         </div>
-        <div className="text-center border-2 rounded-sm m-1">
-          <button onClick={() => addToBasket({ id, name, size, type, color, price, image })}>
-            Add to cart
-          </button>
-        </div>
+        <button
+          onClick={() => addToBasket({ id, name, size, type, color, price, image })}
+          className="w-full text-center border-2 rounded-sm m-1 cursor-pointer"
+        >
+          Add to cart
+        </button>
       </dialog>
     </>
   );
